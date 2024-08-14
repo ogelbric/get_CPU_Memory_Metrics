@@ -149,3 +149,6 @@ printf "          %.2f CPUs " $((10**2 * SUMC/1000))e-2
 printf "          %.2f Mem " $((10**2 * SUMM/954))e-2
 echo
 ```
+
+# Script inspired by (https://gist.github.com/mbentley/9101668ea0377c2b31911a981ab87892) - Thank you 
+
