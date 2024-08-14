@@ -35,6 +35,11 @@
                                          Total          10.65 CPUs           12.05 Mem
 [root@orfdns ~]#
 ```
+#Run options
+```
+./getcpuandmemeory.sh -requests
+./getcpuandmemeory.sh -limits
+```
 
 #Script
 ```
