@@ -56,8 +56,17 @@ SUMC=0.0
 
 # which metrics we want to get
 METRICS="requests"
+#METRICS="limits"
 #METRICS="requests limits"
 
+if [ $1 == "-requests" ] ; then
+  METRICS="requests"
+  echo "Calculating for requested resources........"
+fi
+if [ $1 == "-limits" ] ; then
+  METRICS="limits"
+  echo "Calculating for limit resources........"
+fi
 # loop through namespaces
 for NS in ${NAMESPACES}
 do
@@ -148,6 +157,7 @@ printf " %45s" "Total"
 printf "          %.2f CPUs " $((10**2 * SUMC/1000))e-2
 printf "          %.2f Mem " $((10**2 * SUMM/954))e-2
 echo
+
 ```
 
 # Script inspired by (https://gist.github.com/mbentley/9101668ea0377c2b31911a981ab87892) - Thank you 
